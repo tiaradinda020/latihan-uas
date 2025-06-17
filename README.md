@@ -13,7 +13,7 @@ Proyek ini adalah frontend Laravel yang berfungsi menampilkan, menambah, mengedi
 - Postman (Pengujian API)
 
 ---
-## Langkah-langkah 
+## BackEnd
 Pastikan Anda telah menginstal Composer dan lingkungan PHP yang sesuai.
 
 1.  *Clone Repository:*
@@ -55,7 +55,7 @@ App/Config/Database.php
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
 
-8.  *Buat Collection (untuk API Testing):*
+9.  *Buat Collection (untuk API Testing):*
     Buat koleksi di alat pengujian API seperti Postman atau Insomnia untuk menguji request GET, POST, PUT, dan DELETE.
 - Get (Mengambil / Mendapatkan)
 - Post (pos / mengirim data ke server)
@@ -64,7 +64,45 @@ App/Config/Database.php
 - Head (untuk mendapatkan header respons dari server tanpa memuat konten sebenarnya)
 - Options (untuk meminta informasi tentang opsi komunikasi yang tersedia untuk sumber daya tertentu, opsi permintaan, pengaturan, Opsi CLI (Command Line Interface)
 
+  #### Metode GET
+  http://localhost:8080/mahasiswa
+  #### Metode Post
+  http://localhost:8080/mahasiswa
+  - Pergi ke tab Body → pilih raw → pilih format JSON → masukkan data seperti:
 
+    {
+    "npm_mhs": "22222222",
+    "nama_mhs": "Muhammad Alva Rezal",
+    "prodi": "Teknik Informatika",
+    "alamat": "Jalan Baruna Tengah X",
+    "no_telp": "08997911040",
+    "email": "ralfa9339@gmail.com"
+
+}
+
+#### Metode PUT
+http://localhost:8080/mahasiswa/update/22222222
+- angka 222222222 adalah mahasiswa yang ingin di edit 
+- Buka tab Body → pilih raw → pilih JSON Lalu masukkan data yang ingin diubah:
+
+  {
+    "npm_mhs": "121212",
+    "nama_mhs": "Muhammad Alva Rezal",
+    "prodi": "Teknik Informatika",
+    "alamat": "Jalan Baruna Tengah X",
+    "no_telp": "08997911040",
+    "email": "ralfa9339@gmail.com"
+
+}
+
+- Jika berhasil akan muncul:
+
+              'status' => 'success',
+            'message' => 'Data mahasiswa berhasil diperbarui'
+  
+#### Metode Delete
+http://localhost:8080/mahasiswa/delete/121212
+- angka 121212 adalah data mahasiswa yang ingin dihapus
 
 10.  *Install Dependencies:*
     Jalankan perintah Composer untuk menginstal semua dependensi proyek di dalam terminal backend_kelompok1
@@ -83,7 +121,7 @@ Jika ada proyek frontend terpisah yang terhubung dengan backend ini, Anda bisa m
 
 
 
-# Push ke Github
+## Push ke Github
 
 - Membuat repo
 - git init
