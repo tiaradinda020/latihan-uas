@@ -66,11 +66,13 @@ App/Config/Database.php
 
   #### Metode GET
   http://localhost:8080/mahasiswa
+  
   #### Metode Post
   http://localhost:8080/mahasiswa
   - Pergi ke tab Body → pilih raw → pilih format JSON → masukkan data seperti:
 
-    {
+{
+
     "npm_mhs": "22222222",
     "nama_mhs": "Muhammad Alva Rezal",
     "prodi": "Teknik Informatika",
@@ -85,7 +87,8 @@ http://localhost:8080/mahasiswa/update/22222222
 - angka 222222222 adalah mahasiswa yang ingin di edit 
 - Buka tab Body → pilih raw → pilih JSON Lalu masukkan data yang ingin diubah:
 
-  {
+{
+
     "npm_mhs": "121212",
     "nama_mhs": "Muhammad Alva Rezal",
     "prodi": "Teknik Informatika",
@@ -97,7 +100,7 @@ http://localhost:8080/mahasiswa/update/22222222
 
 - Jika berhasil akan muncul:
 
-              'status' => 'success',
+            'status' => 'success',
             'message' => 'Data mahasiswa berhasil diperbarui'
   
 #### Metode Delete
