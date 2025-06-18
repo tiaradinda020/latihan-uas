@@ -122,6 +122,15 @@ http://localhost:8080/mahasiswa/delete/121212
 
 Jika ada proyek frontend terpisah yang terhubung dengan backend ini, Anda bisa menyertakan instruksi atau referensi ke repositori frontend di sini.
 
+1. Membuat file frontend
+
+    - composer create-project laravel/Laravel frondend_uas
+    - cd file frontend_uas
+    - php artisan serve
+2. Membuat 
+
+
+
 
 
 ## Push ke Github
